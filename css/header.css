@@ -32,17 +32,28 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
+  .header-left {
+    width: 60%;
+    display: flex;
+  }
+
+  .header-left img {
+    width: 30%;
+  }
+
   .search-button {
     display: none;
   }
 
   .search-bar {
     display: flex;
+    width: 70%;
     align-items: center;
+    padding-left: 32px;
   }
 
   .search-bar-input {
-    width: 272px;
+    width: 100%;
     height: 40px;
     border: none;
     border-radius: 20px;
