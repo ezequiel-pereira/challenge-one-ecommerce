@@ -81,3 +81,21 @@ header {
     transform: translateX(-36px);
   }
 }
+
+@media only screen and (min-width: 922px) {
+  header {
+    padding: 32px 0;
+  }
+
+  .header-left {
+    width: 60%;
+  }
+
+  .header-left img {
+    width: 30%;
+  }
+
+  .search-button {
+    display: none;
+  }
+}
