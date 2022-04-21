@@ -23,6 +23,10 @@
 <body>
   <header class="container">
     <img src="./img/logo.svg" alt="Alura Geek Logo">
+    <form class="search-bar" action="">
+      <input class="search-bar-input" type="search" placeholder="¿Qué deseas buscar?">
+      <buttton class="search-bar-button"><span class="search-bar-icon"></span></buttton>
+    </form>
     <button class="button login-button">Login</button>
     <buttton class="search-button"><span class="search-button-icon"></span></buttton>
   </header>
@@ -171,34 +175,36 @@
   </main>
   <footer>
     <div class="contact">
-      <div class="contact-info container">
-        <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek">
-        <ul>
-          <li class="contact-list-item"><a class="contact-link" href="#">Quienes somos</a></li>
-          <li class="contact-list-item"><a class="contact-link" href="#">Política de privacidad</a></li>
-          <li class="contact-list-item"><a class="contact-link" href="#">Programa de fidelidad</a></li>
-          <li class="contact-list-item"><a class="contact-link" href="#">Nuestras tiendas</a></li>
-          <li class="contact-list-item"><a class="contact-link" href="#">Quiero ser franquiciado</a></li>
-          <li class="contact-list-item"><a class="contact-link" href="#">Anuncie aquí</a></li>
-        </ul>
-      </div>
-      <div class="contact-form container">
-        <p class="contact-form-title">Hable con nosotros</p>
-        <form class="form" action="">
-          <div class="input-container">
-            <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
-              maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
-            <label class="form-label" for="name">Nombre</label>
-            <span class="input-error-message">Error</span>
-          </div>
-          <div class="input-container">
-            <textarea class="form-input form-textarea" type="text" id="message" name="message"
-              placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required></textarea>
-            <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
-            <span class="input-error-message">Error</span>
-          </div>
-          <input class="hero-button" type="submit" id="submit" value="Enviar mensaje" disabled />
-        </form>
+      <div class="contact-content container">
+        <div class="contact-info">
+          <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek">
+          <ul>
+            <li class="contact-list-item"><a class="contact-link" href="#">Quienes somos</a></li>
+            <li class="contact-list-item"><a class="contact-link" href="#">Política de privacidad</a></li>
+            <li class="contact-list-item"><a class="contact-link" href="#">Programa de fidelidad</a></li>
+            <li class="contact-list-item"><a class="contact-link" href="#">Nuestras tiendas</a></li>
+            <li class="contact-list-item"><a class="contact-link" href="#">Quiero ser franquiciado</a></li>
+            <li class="contact-list-item"><a class="contact-link" href="#">Anuncie aquí</a></li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <p class="contact-form-title">Hable con nosotros</p>
+          <form class="form" action="">
+            <div class="input-container">
+              <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
+                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
+              <label class="form-label" for="name">Nombre</label>
+              <span class="input-error-message">Error</span>
+            </div>
+            <div class="input-container">
+              <textarea class="form-input form-textarea" type="text" id="message" name="message"
+                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required></textarea>
+              <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
+              <span class="input-error-message">Error</span>
+            </div>
+            <input class="hero-button" type="submit" id="submit" value="Enviar mensaje" disabled />
+          </form>
+        </div>
       </div>
     </div>
     <div class="author">

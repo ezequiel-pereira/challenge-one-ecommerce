@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 16px 0;
+  padding-bottom: 16px;
 }
 
 .items-header-title {
@@ -51,6 +51,7 @@
 
 .item {
   width: 48%;
+  max-width: 156px;
   height: 250px;
   margin-bottom: 16px;
 }
@@ -72,4 +73,22 @@
   font-size: 16px;
   line-height: 19px;
   margin: 8px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .items {
+    padding: 32px 0;
+  }
+
+  .items-header {
+    padding-bottom: 16px;
+  }
+
+  .items-list {
+    height: 250px;
+  }
+
+  .item {
+    margin: 0;
+  }
 }
