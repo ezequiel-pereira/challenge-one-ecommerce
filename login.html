@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/form.css">
-  <title>Producto</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -37,14 +37,15 @@
         <h2 class="login-form-title">Iniciar sesión</h2>
         <form class="form" action="">
           <div class="input-container">
-            <input class="form-input" id="name" name="name" placeholder="Escriba su correo electrónico" type="text" minlength="2"
-              maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
+            <input class="form-input" id="email" name="email" placeholder="Escriba su correo electrónico" type="email"
+              required />
             <label class="form-label" for="name">Escriba su correo electrónico</label>
             <span class="input-error-message">Error</span>
           </div>
           <div class="input-container">
-            <input class="form-input" id="name" name="name" placeholder="Escriba su contraseña" type="text" minlength="2"
-              maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
+            <input class="form-input" id="name" name="name" placeholder="Escriba su contraseña" type="password"
+              minlength="2" maxlength="50" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+              required />
             <label class="form-label" for="name">Escriba su contraseña</label>
             <span class="input-error-message">Error</span>
           </div>
