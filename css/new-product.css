@@ -1,0 +1,121 @@
+.product {
+  background-color: var(--primary-bg-color);
+  padding: 16px 0;
+}
+
+.product-form {
+  width: 90%;
+  margin: auto;
+}
+
+.product-form-title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 16px;
+}
+
+.product-form-button {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.drop-zone {
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px dashed var(--placeholder-color);
+}
+
+.drop-zone-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--placeholder-color);
+}
+
+.drop-zone-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 16px;
+  background: url('../img/plus.svg') center / cover no-repeat;
+}
+
+.add-img-text {
+  display: none;
+}
+
+.add-img-button {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .add-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  .drop-zone {
+    width: 40%;
+    height: 20vw;
+  }
+
+  .drop-zone-icon {
+    width: 32px;
+    height: 32px;
+    background: url('../img/add-img.svg') center / cover no-repeat;
+  }
+
+  .add-img-text {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 8px;
+  }
+
+  .add-img-button {
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--secondary-font-color);
+    border: 1px solid var(--secondary-font-color);
+    padding: 16px;
+  }
+}
+
+@media only screen and (min-width: 922px) {
+  .product {
+    padding: 64px 0;
+  }
+
+  .product-form {
+    width: 40%;
+  }
+
+  .product-form-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .drop-zone {
+    width: 50%;
+    height: 10vw;
+  }
+
+  .add-img-button {
+    width: 45%;
+  }
+}
