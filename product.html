@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -113,17 +113,17 @@
           <form class="form" action="">
             <div class="input-container">
               <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
-                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
+                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required contact-form-input />
               <label class="form-label" for="name">Nombre</label>
               <span class="input-error-message">Error</span>
             </div>
             <div class="input-container">
               <textarea class="form-input form-textarea" type="text" id="message" name="message"
-                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required></textarea>
+                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required contact-form-input></textarea>
               <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
               <span class="input-error-message">Error</span>
             </div>
-            <input class="hero-button" type="submit" id="submit" value="Enviar mensaje" disabled />
+            <input class="hero-button form-submit" type="submit" id="contact-submit" value="Enviar mensaje" disabled />
           </form>
         </div>
       </div>
@@ -133,6 +133,7 @@
       <p>2022</p>
     </div>
   </footer>
+  <script src="js/index.js" type="module"></script>
 </body>
 
 </html>

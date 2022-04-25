@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -36,7 +36,7 @@
       <div class="product-form">
         <h2 class="product-form-title">Agregar nuevo producto</h2>
         <div class="add-img">
-          <div class="drop-zone" id="drop-zone">
+          <div class="drop-zone" id="drop-zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
             <span class="drop-zone-icon"></span>
             <p class="drop-zone-text">Agregar una imagen para el producto</p>
           </div>
@@ -45,24 +45,25 @@
         </div>
         <form class="form" action="">
           <div class="input-container">
-            <input class="form-input" id="product-name" name="product-name" placeholder="Nombre del producto" type="text"
-              required />
+            <input class="form-input" id="product-name" name="productName" placeholder="Nombre del producto" type="text"
+              maxlength="20" pattern="(?!\s*$)[A-Za-zÑñ\s]{1,20}" required product-form-input />
             <label class="form-label" for="product-name">Nombre del producto</label>
             <span class="input-error-message">Error</span>
           </div>
           <div class="input-container">
-            <input class="form-input" id="product-price" name="product-price" placeholder="Precio del producto" type="text"
-              required />
+            <input class="form-input" id="product-price" name="price" placeholder="Precio del producto" type="number"
+              step="0.01" required product-form-input />
             <label class="form-label" for="product-price">Precio del producto</label>
             <span class="input-error-message">Error</span>
           </div>
           <div class="input-container">
-            <textarea class="form-input form-textarea" type="text" id="product-description" name="product-description" placeholder="Descripción del producto"
-              minlength="2" maxlength="300" required></textarea>
+            <textarea class="form-input form-textarea" type="text" id="description" name="description"
+              placeholder="Descripción del producto" maxlength="150" required product-form-input></textarea>
             <label class="form-label textarea-label" for="product-description">Descripción del producto</label>
             <span class="input-error-message">Error</span>
           </div>
-          <input class="hero-button product-form-button" type="submit" id="submit" value="Agregar producto" disabled />
+          <input class="hero-button product-form-button form-submit" type="submit" id="product-submit"
+            value="Agregar producto" disabled />
         </form>
       </div>
     </section>
@@ -86,17 +87,17 @@
           <form class="form" action="">
             <div class="input-container">
               <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
-                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required />
+                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required contact-form-input />
               <label class="form-label" for="name">Nombre</label>
               <span class="input-error-message">Error</span>
             </div>
             <div class="input-container">
               <textarea class="form-input form-textarea" type="text" id="message" name="message"
-                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required></textarea>
+                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required contact-form-input></textarea>
               <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
               <span class="input-error-message">Error</span>
             </div>
-            <input class="hero-button" type="submit" id="submit" value="Enviar mensaje" disabled />
+            <input class="hero-button form-submit" type="submit" id="contact-submit" value="Enviar mensaje" disabled />
           </form>
         </div>
       </div>
@@ -106,6 +107,8 @@
       <p>2022</p>
     </div>
   </footer>
+  <script src="js/addProduct.js" type="module"></script>
+  <script src="js/dropHandler.js"></script>
 </body>
 
 </html>

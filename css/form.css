@@ -81,6 +81,11 @@
 }
 .form-textarea {
   height: 82px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 .form-textarea:focus + .form-label,
 .form-textarea:not(:placeholder-shown) + .form-label {
@@ -88,6 +93,9 @@
 }
 .textarea-label {
   transform: translateY(-98px);
+}
+.form-submit:disabled {
+  background-color: grey;
 }
 .input-error-message {
   display: none;
