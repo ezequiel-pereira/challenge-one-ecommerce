@@ -1,114 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/new-product.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Agregar producto</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/new-product.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/form.css">
-  <title>Agregar producto</title>
-</head>
-
-<body>
-  <header class="container">
-    <div class="header-left">
-      <img src="./img/logo.svg" alt="Alura Geek Logo">
-      <form class="search-bar" action="">
-        <input class="search-bar-input" type="search" placeholder="¿Qué deseas buscar?">
-        <buttton class="search-bar-button"><span class="search-bar-icon"></span></buttton>
-      </form>
-    </div>
-    <button class="button login-button">Login</button>
-    <buttton class="search-button"><span class="search-button-icon"></span></buttton>
-  </header>
-  <main>
-    <section class="product">
-      <div class="product-form">
-        <h2 class="product-form-title">Agregar nuevo producto</h2>
-        <div class="add-img">
-          <div class="drop-zone" id="drop-zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-            <span class="drop-zone-icon"></span>
-            <p class="drop-zone-text">Agregar una imagen para el producto</p>
-          </div>
-          <p class="add-img-text">O</p>
-          <button class="add-img-button">Busque en su dispositivo</button>
-        </div>
-        <form class="form" action="">
-          <div class="input-container">
-            <input class="form-input" id="product-name" name="productName" placeholder="Nombre del producto" type="text"
-              maxlength="20" pattern="(?!\s*$)[A-Za-zÑñ\s]{1,20}" required product-form-input />
-            <label class="form-label" for="product-name">Nombre del producto</label>
-            <span class="input-error-message">Error</span>
-          </div>
-          <div class="input-container">
-            <input class="form-input" id="product-price" name="price" placeholder="Precio del producto" type="number"
-              step="0.01" required product-form-input />
-            <label class="form-label" for="product-price">Precio del producto</label>
-            <span class="input-error-message">Error</span>
-          </div>
-          <div class="input-container">
-            <textarea class="form-input form-textarea" type="text" id="description" name="description"
-              placeholder="Descripción del producto" maxlength="150" required product-form-input></textarea>
-            <label class="form-label textarea-label" for="product-description">Descripción del producto</label>
-            <span class="input-error-message">Error</span>
-          </div>
-          <input class="hero-button product-form-button form-submit" type="submit" id="product-submit"
-            value="Agregar producto" disabled />
+  <body>
+    <header class="container">
+      <div class="header-left">
+        <img src="./img/logo.svg" alt="Alura Geek Logo" />
+        <form class="search-bar" action="">
+          <input
+            class="search-bar-input"
+            type="search"
+            placeholder="¿Qué deseas buscar?"
+          />
+          <buttton class="search-bar-button"
+            ><span class="search-bar-icon"></span
+          ></buttton>
         </form>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="contact">
-      <div class="contact-content container">
-        <div class="contact-info">
-          <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek">
-          <ul class="contact-links">
-            <li class="contact-list-item"><a class="contact-link" href="#">Quienes somos</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Política de privacidad</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Programa de fidelidad</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Nuestras tiendas</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Quiero ser franquiciado</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Anuncie aquí</a></li>
-          </ul>
-        </div>
-        <div class="contact-form">
-          <p class="contact-form-title">Hable con nosotros</p>
+      <button class="button login-button">Login</button>
+      <buttton class="search-button"
+        ><span class="search-button-icon"></span
+      ></buttton>
+    </header>
+    <main>
+      <section class="product">
+        <div class="product-form">
+          <h2 class="product-form-title">Agregar nuevo producto</h2>
+          <div class="add-img">
+            <div class="drop-zone" id="drop-zone">
+              <span class="drop-zone-icon"></span>
+              <p class="drop-zone-text">Agregar una imagen para el producto</p>
+            </div>
+            <p class="add-img-text">O</p>
+            <input
+              type="file"
+              id="add-img-input"
+              multiple
+              accept="image/*"
+              style="display: none"
+            />
+            <button class="add-img-button" id="add-img-button">Busque en su dispositivo</button>
+          </div>
+          <div class="preview" id="preview">
+            <img class="preview-img" id="preview-img">
+          </div>
           <form class="form" action="">
             <div class="input-container">
-              <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
-                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required contact-form-input />
-              <label class="form-label" for="name">Nombre</label>
+              <input
+                class="form-input"
+                id="product-name"
+                name="productName"
+                placeholder="Nombre del producto"
+                type="text"
+                maxlength="20"
+                pattern="(?!\s*$)[A-Za-zÑñ\s]{1,20}"
+                required
+                product-form-input
+              />
+              <label class="form-label" for="product-name"
+                >Nombre del producto</label
+              >
               <span class="input-error-message">Error</span>
             </div>
             <div class="input-container">
-              <textarea class="form-input form-textarea" type="text" id="message" name="message"
-                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required contact-form-input></textarea>
-              <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
+              <input
+                class="form-input"
+                id="product-price"
+                name="price"
+                placeholder="Precio del producto"
+                type="number"
+                step="0.01"
+                required
+                product-form-input
+              />
+              <label class="form-label" for="product-price"
+                >Precio del producto</label
+              >
               <span class="input-error-message">Error</span>
             </div>
-            <input class="hero-button form-submit" type="submit" id="contact-submit" value="Enviar mensaje" disabled />
+            <div class="input-container">
+              <textarea
+                class="form-input form-textarea"
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Descripción del producto"
+                maxlength="150"
+                required
+                product-form-input
+              ></textarea>
+              <label class="form-label textarea-label" for="product-description"
+                >Descripción del producto</label
+              >
+              <span class="input-error-message">Error</span>
+            </div>
+            <input
+              class="hero-button product-form-button form-submit"
+              type="submit"
+              id="product-submit"
+              value="Agregar producto"
+              disabled
+            />
           </form>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact">
+        <div class="contact-content container">
+          <div class="contact-info">
+            <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek" />
+            <ul class="contact-links">
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Quienes somos</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Política de privacidad</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Programa de fidelidad</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Nuestras tiendas</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Quiero ser franquiciado</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Anuncie aquí</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <p class="contact-form-title">Hable con nosotros</p>
+            <form class="form" action="">
+              <div class="input-container">
+                <input
+                  class="form-input"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                  type="text"
+                  minlength="2"
+                  maxlength="50"
+                  pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}"
+                  required
+                  contact-form-input
+                />
+                <label class="form-label" for="name">Nombre</label>
+                <span class="input-error-message">Error</span>
+              </div>
+              <div class="input-container">
+                <textarea
+                  class="form-input form-textarea"
+                  type="text"
+                  id="message"
+                  name="message"
+                  placeholder="Escribe tu mensaje"
+                  minlength="2"
+                  maxlength="300"
+                  required
+                  contact-form-input
+                ></textarea>
+                <label class="form-label textarea-label" for="message"
+                  >Escribe tu mensaje</label
+                >
+                <span class="input-error-message">Error</span>
+              </div>
+              <input
+                class="hero-button form-submit"
+                type="submit"
+                id="contact-submit"
+                value="Enviar mensaje"
+                disabled
+              />
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="author">
-      <p>Desarrollado por Ezequiel Pereira</p>
-      <p>2022</p>
-    </div>
-  </footer>
-  <script src="js/addProduct.js" type="module"></script>
-  <script src="js/dropHandler.js"></script>
-</body>
-
+      <div class="author">
+        <p>Desarrollado por Ezequiel Pereira</p>
+        <p>2022</p>
+      </div>
+    </footer>
+    <script src="js/addProduct.js" type="module"></script>
+  </body>
 </html>
