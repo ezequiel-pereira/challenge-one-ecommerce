@@ -1,33 +1,118 @@
 {
   "products": [
     {
-      "id": "1",
-      "img": "img/product_image.jpeg",
-      "nombre": "product",
-      "precio": 1,
-      "description": "decripcion"
+      "img": "img/star-wars.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
     },
     {
-      "id": "1",
-      "img": "img/product_image.jpeg",
-      "nombre": "product",
-      "precio": 1,
-      "description": "decripcion"
+      "img": "img/star-wars2.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
     },
     {
-      "id": "1",
-      "img": "img/product_image.jpeg",
-      "nombre": "product",
-      "precio": 1,
-      "description": "decripcion"
+      "img": "img/star-wars3.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
+    },
+    {
+      "img": "img/star-wars4.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
+    },
+    {
+      "img": "img/star-wars5.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
+    },
+    {
+      "img": "img/star-wars6.png",
+      "name": "Producto XYZ",
+      "price": "R$ 60,00",
+      "description": "Decripción del producto"
+    },
+    {
+      "img": "img/control.png",
+      "name": "Control XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/consolaycontrol.png",
+      "name": "Consola y control XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/control2.png",
+      "name": "Control XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/consola2.png",
+      "name": "Consola XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/control2.png",
+      "name": "Consola XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/gameboycolor.png",
+      "name": "Game Boy Color",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/camisaatari.png",
+      "name": "Camisa Atari",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/camisasnes.png",
+      "name": "Camisa SNES",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/sonic.png",
+      "name": "Sonic",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/consolaxyz.png",
+      "name": "Consola XYZ",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/oculus.png",
+      "name": "Oculus",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
+    },
+    {
+      "img": "img/pikachu.png",
+      "name": "Pikachu",
+      "price": "R$ 60,00",
+      "description": "Descripción del producto"
     }
   ],
   "users": [
     {
-      "id": "1",
-      "email": "e@a",
+      "email": "eze@alura",
       "password": "1234"
     }
   ]
-
 }
