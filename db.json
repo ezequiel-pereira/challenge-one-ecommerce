@@ -1,0 +1,33 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "img": "img/product_image.jpeg",
+      "nombre": "product",
+      "precio": 1,
+      "description": "decripcion"
+    },
+    {
+      "id": "1",
+      "img": "img/product_image.jpeg",
+      "nombre": "product",
+      "precio": 1,
+      "description": "decripcion"
+    },
+    {
+      "id": "1",
+      "img": "img/product_image.jpeg",
+      "nombre": "product",
+      "precio": 1,
+      "description": "decripcion"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "e@a",
+      "password": "1234"
+    }
+  ]
+
+}

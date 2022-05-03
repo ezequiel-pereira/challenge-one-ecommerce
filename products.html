@@ -13,11 +13,10 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/hero.css">
   <link rel="stylesheet" href="./css/galery.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/form.css">
-  <title>Alura Geek</title>
+  <title>Producto</title>
 </head>
 
 <body>
@@ -29,24 +28,17 @@
         <buttton class="search-bar-button"><span class="search-bar-icon"></span></buttton>
       </form>
     </div>
-    <a href="login.html"><button class="button login-button">Login</button></a>
+    <button class="button login-button">Login</button>
     <buttton class="search-button"><span class="search-button-icon"></span></buttton>
   </header>
   <main>
-    <section class="hero">
-      <div class="container">
-        <h2 class="hero-title">Febrero Promocional</h2>
-        <p class="hero-subtitle">Productos seleccionados con 33% de descuento</p>
-        <a href="#consolas"><button class="button hero-button">Ver Consolas</button></a>
-      </div>
-    </section>
-    <section class="galery">
-      <div class="items container" id="consolas">
-        <div class="items-header">
-          <h2 class="items-header-title">Star Wars</h2>
-          <button class="item-button item-header-button">Ver todo<span class="vector"></span></button>
+    <section class="galery ">
+      <div class="items container">
+        <div class="items-header  header-all">
+          <h2 class="items-header-title">Todos los productos</h2>
+          <a href="new-product.html"><button class="button hero-button">Agregar Producto</button></a>
         </div>
-        <div class="items-list">
+        <div class="items-list all">
           <div class="item">
             <img class="item-img" src="img/star-wars.png" alt="">
             <h3 class="item-title">Producto XYZ</h3>
@@ -83,14 +75,6 @@
             <p class="item-price">R$ 60,00</p>
             <button class="item-button">Ver producto</button>
           </div>
-        </div>
-      </div>
-      <div class="items container">
-        <div class="items-header">
-          <h2 class="items-header-title">Consolas</h2>
-          <button class="item-button item-header-button">Ver todo<span class="vector"></span></button>
-        </div>
-        <div class="items-list">
           <div class="item">
             <img class="item-img" src="img/control.png" alt="">
             <h3 class="item-title">Control XYZ</h3>
@@ -127,14 +111,6 @@
             <p class="item-price">R$ 60,00</p>
             <button class="item-button">Ver producto</button>
           </div>
-        </div>
-      </div>
-      <div class="items container">
-        <div class="items-header">
-          <h2 class="items-header-title">Diversos</h2>
-          <button class="item-button item-header-button">Ver todo<span class="vector"></span></button>
-        </div>
-        <div class="items-list">
           <div class="item">
             <img class="item-img" src="img/camisaatari.png" alt="">
             <h3 class="item-title">Camisa Atari</h3>
@@ -215,7 +191,6 @@
     </div>
   </footer>
   <script src="js/index.js" type="module"></script>
-  <script src="js/service/product.js"></script>
 </body>
 
 </html>
