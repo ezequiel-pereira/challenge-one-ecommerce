@@ -1,5 +1,8 @@
 import { handleFiles } from "./handleFile.js";
 import { validateInputs } from "./validate.js";
+import { productService } from "./service/product.js";
+
+const product = {};
 
 const addProductInputs = document.querySelectorAll("[product-form-input]");
 const productSubmit = document.getElementById("product-submit");
@@ -46,5 +49,17 @@ function handleInput(e) {
 }
 
 addImgInput.addEventListener("change", handleInput, false);
+
 validateInputs(addProductInputs, productSubmit);
 validateInputs(contactInputs, submitButton);
+
+productSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  addProductInputs.forEach((input) => {
+    product[input.name] = input.value;
+  });
+  productService.create(product).then((response) => {
+    console.log(response);
+  }).catch(error => console.log(error));
+});

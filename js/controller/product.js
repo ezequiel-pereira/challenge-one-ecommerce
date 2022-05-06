@@ -1,4 +1,4 @@
-import { getProducts } from "../service/product.js";
+import { productService } from "../service/product.js";
 
 const products = document.getElementById("products-list");
 
@@ -14,7 +14,7 @@ const renderProduct = (product) => {
   return productDiv;
 };
 
-getProducts()
+productService.read()
   .then((data) => {
     data.forEach((element) => {
       const newProduct = renderProduct(element);
