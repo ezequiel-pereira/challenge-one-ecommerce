@@ -20,6 +20,8 @@ body {
 
 .button {
   font-family: "Raleway", sans-serif;
+  border: none;
+  background: none;
 }
 
 .hero-button {

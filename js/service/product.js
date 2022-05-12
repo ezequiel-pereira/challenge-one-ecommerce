@@ -20,4 +20,12 @@ const read = () => {
   });
 };
 
-export const productService = { create, read };
+const deleteById = (id) => {
+  return fetch(`${URL}/${id}`, {
+    method: "DELETE"
+  }).then((response) => {
+    return response.json();
+  });
+}
+
+export const productService = { create, read, deleteById };

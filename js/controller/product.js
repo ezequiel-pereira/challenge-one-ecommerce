@@ -2,19 +2,38 @@ import { productService } from "../service/product.js";
 
 const products = document.getElementById("products-list");
 
-const renderProduct = (product) => {
+const renderProduct = ({ img, name, price, id }) => {
   const productDiv = document.createElement("div");
   productDiv.classList.add("item");
   const content = `
-    <img class="item-img" src="${product.img}" alt="${product.description}">
-    <h3 class="item-title">${product.name}</h3>
-    <p class="item-price">${product.price}</p>
-    <button class="item-button">Ver producto</button>`;
+    <div class="admin">
+      <button class="button" id="${id}" delete-button>
+        <span class="icon delete-button"></span>
+      </button>
+      <button class="button" id="${id}">
+        <span class="icon edit-button"></span>
+      </button>
+    </div>
+    <img class="item-img" src="${img}" alt="${name}">
+    <h3 class="item-title">${name}</h3>
+    <p class="item-price">${price}</p>
+    <button class="item-button" id="${id}">Ver producto</button>`;
   productDiv.innerHTML = content;
+  const deleteButton = productDiv.querySelector("[delete-button]");
+  deleteButton.addEventListener("click", () => {
+    const id = deleteButton.id;
+    productService
+      .deleteById(id)
+      .then(() => {
+        location.reload();
+      })
+      .catch((error) => consolerror.log(error));
+  });
   return productDiv;
 };
 
-productService.read()
+productService
+  .read()
   .then((data) => {
     data.forEach((element) => {
       const newProduct = renderProduct(element);
