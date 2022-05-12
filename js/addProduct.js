@@ -1,4 +1,4 @@
-import { handleFiles } from "./handleFile.js";
+//import { handleFiles } from "./handleFile.js";
 import { validateInputs } from "./validate.js";
 import { productService } from "./service/product.js";
 
@@ -50,16 +50,34 @@ function handleInput(e) {
 
 addImgInput.addEventListener("change", handleInput, false);
 
+function handleFiles(files) {
+  const file = files[0];
+  const preview = document.getElementById("preview");
+  preview.style.display = "block";
+  const img = document.getElementById("preview-img");
+
+  const reader = new FileReader();
+  reader.onload = (function (aImg) {
+    return function (e) {
+      aImg.src = e.target.result;
+      product.img = e.target.result
+      console.log(product);
+    };
+  })(img);
+  reader.readAsDataURL(file);
+}
+
 validateInputs(addProductInputs, productSubmit);
 validateInputs(contactInputs, submitButton);
 
 productSubmit.addEventListener("click", (event) => {
   event.preventDefault();
 
-  addProductInputs.forEach((input) => {
-    product[input.name] = input.value;
-  });
-  productService.create(product).then((response) => {
-    console.log(response);
+  product.name = document.getElementById("product-name").value;
+  product.price = document.getElementById("product-price").value;
+  product.description = document.getElementById("description").value;
+
+  productService.create(product).then(() => {
+    window.location.href = "/products.html" 
   }).catch(error => console.log(error));
 });
