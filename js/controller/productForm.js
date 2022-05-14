@@ -1,8 +1,16 @@
 //import { handleFiles } from "./handleFile.js";
-import { validateInputs } from "./validate.js";
-import { productService } from "./service/product.js";
+import { validateInputs } from "../validate.js";
+import { productService } from "../service/product.js";
 
 const product = {};
+
+const url = new URL(window.location);
+const id = url.searchParams.get("id");
+
+if (id) {
+  getProductData(id);
+  product.id = id;
+}
 
 const addProductInputs = document.querySelectorAll("[product-form-input]");
 const productSubmit = document.getElementById("product-submit");
@@ -60,11 +68,27 @@ function handleFiles(files) {
   reader.onload = (function (aImg) {
     return function (e) {
       aImg.src = e.target.result;
-      product.img = e.target.result
+      product.img = e.target.result;
       console.log(product);
     };
   })(img);
   reader.readAsDataURL(file);
+}
+
+function getProductData(productId) {
+  const id = productId;
+  const img = document.getElementById("preview-img");
+  const name = document.getElementById("product-name");
+  const price = document.getElementById("product-price");
+  const description = document.getElementById("description");
+
+  productService.readById(id).then((product) => {
+    img.src = product.img;
+    img.parentElement.style.display = "block";
+    name.value = product.name;
+    price.value = product.price;
+    description.value = product.description;
+  });
 }
 
 validateInputs(addProductInputs, productSubmit);
@@ -73,11 +97,26 @@ validateInputs(contactInputs, submitButton);
 productSubmit.addEventListener("click", (event) => {
   event.preventDefault();
 
+  product.img = document.getElementById("preview-img").src;
   product.name = document.getElementById("product-name").value;
   product.price = document.getElementById("product-price").value;
   product.description = document.getElementById("description").value;
-
-  productService.create(product).then(() => {
-    window.location.href = "/products.html" 
-  }).catch(error => console.log(error));
+  debugger
+  if (product.id) {
+    debugger
+    productService
+      .update(product)
+      .then(() => {
+        window.location.href = "/products.html";
+      })
+      .catch((error) => console.log(error));
+  } else {
+    debugger
+    productService
+      .create(product)
+      .then(() => {
+        window.location.href = "/products.html";
+      })
+      .catch((error) => console.log(error));
+  }
 });
