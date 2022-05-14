@@ -1,8 +1,26 @@
 import { productService } from "../service/product.js";
 
-const products = document.getElementById("products-list");
+const url = new URL(window.location);
+const keyword = url.searchParams.get("keyword");
+const productsList = document.getElementById("products-list");
 
-const renderProduct = ({ img, name, price, id }) => {
+let products = await productService.read();
+
+if (keyword) {
+  products = search(keyword);
+  renderProducts();
+} else {
+  renderProducts();
+}
+
+function renderProducts() {
+  products.forEach((element) => {
+    const newProduct = buildProductHtml(element);
+    productsList.appendChild(newProduct);
+  });
+}
+
+function buildProductHtml({ img, name, price, id }) {
   const productDiv = document.createElement("div");
   productDiv.classList.add("item");
   const content = `
@@ -43,14 +61,15 @@ const renderProduct = ({ img, name, price, id }) => {
   return productDiv;
 };
 
-productService
-  .read()
-  .then((data) => {
-    data.forEach((element) => {
-      const newProduct = renderProduct(element);
-      products.appendChild(newProduct);
-    });
-  })
-  .catch((e) => {
-    console.log(e);
+function search(keyword) {
+  const result = [];
+
+  products.forEach(product => {
+    const name = product.name.toLowerCase();
+    const description = product.description.toLowerCase();
+    if (name.includes(keyword) || description.includes(keyword)) {
+      result.push(product);
+    }
   });
+  return result;
+}

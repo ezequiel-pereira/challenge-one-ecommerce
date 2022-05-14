@@ -69,7 +69,6 @@ function handleFiles(files) {
     return function (e) {
       aImg.src = e.target.result;
       product.img = e.target.result;
-      console.log(product);
     };
   })(img);
   reader.readAsDataURL(file);
@@ -101,9 +100,8 @@ productSubmit.addEventListener("click", (event) => {
   product.name = document.getElementById("product-name").value;
   product.price = document.getElementById("product-price").value;
   product.description = document.getElementById("description").value;
-  debugger
+  
   if (product.id) {
-    debugger
     productService
       .update(product)
       .then(() => {
@@ -111,7 +109,6 @@ productSubmit.addEventListener("click", (event) => {
       })
       .catch((error) => console.log(error));
   } else {
-    debugger
     productService
       .create(product)
       .then(() => {

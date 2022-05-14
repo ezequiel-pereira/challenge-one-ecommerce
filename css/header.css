@@ -60,12 +60,25 @@ header {
     background-color: #F5F5F5;
   }
 
+  .search-bar-input:focus {
+    outline: none;
+  }
+
   .search-bar-input::placeholder {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: var(--placeholder-color);
+  }
+
+  input[type="search" i] {
+    color: var(--primary-font-color);
+    box-sizing: border-box;
     padding-left: 16px;
+  }
+
+  .search-bar-input::-webkit-search-cancel-button{
+    display: none;
   }
 
   .search-bar-button {
