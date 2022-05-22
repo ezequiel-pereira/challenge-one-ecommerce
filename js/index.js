@@ -15,5 +15,5 @@ searchBar.addEventListener("submit", search);
 function search(event) {
   event.preventDefault();
   const keyword = searchInput.value.toLowerCase();
-  window.location.href = `/product-list.html?keyword=${keyword}`;
+  window.location.href = `./product-list.html?keyword=${keyword}`;
 }

@@ -105,14 +105,14 @@ productSubmit.addEventListener("click", (event) => {
     productService
       .update(product)
       .then(() => {
-        window.location.href = "/product-list.html";
+        window.location.href = "./product-list.html";
       })
       .catch((error) => console.log(error));
   } else {
     productService
       .create(product)
       .then(() => {
-        window.location.href = "/product-list.html";
+        window.location.href = "./product-list.html";
       })
       .catch((error) => console.log(error));
   }

@@ -55,14 +55,14 @@ function buildProductHtml({ img, name, price, id }) {
 
   editButton.addEventListener("click", () => {
     const id = editButton.id;
-    window.location.href = `/product-form.html?id=${id}`;
+    window.location.href = `./product-form.html?id=${id}`;
   });
 
   const viewButton = productDiv.querySelector(".item-button");
 
   viewButton.addEventListener("click", () => {
     const id = viewButton.id;
-    window.location.href = `/product-detail.html?id=${id}`;
+    window.location.href = `./product-detail.html?id=${id}`;
   });
 
   return productDiv;

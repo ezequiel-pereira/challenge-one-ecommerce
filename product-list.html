@@ -1,97 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/galery.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Todos los productos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/galery.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/form.css">
-  <title>Todos los productos</title>
-</head>
-
-<body>
-  <header class="container">
-    <div class="header-left">
-      <img src="./img/logo.svg" alt="Alura Geek Logo">
-      <form class="search-bar" id="search-bar">
-        <input
-          class="search-bar-input"
-          type="search"
-          placeholder="¿Qué deseas buscar?"
-          id="search-input"
-        />
-        <buttton type="submit" class="search-bar-button" id="search-button"
-          ><span class="search-bar-icon"></span
-        ></buttton>
-      </form>
-    </div>
-    <button class="button login-button">Login</button>
-    <buttton class="search-button"><span class="search-button-icon"></span></buttton>
-  </header>
-  <main>
-    <section class="galery">
-      <div class="items container">
-        <div class="items-header header-all">
-          <h2 class="items-header-title">Todos los productos</h2>
-          <a href="product-form.html"><button class="button hero-button">Agregar Producto</button></a>
+  <body>
+    <header class="container">
+      <div class="header-left">
+        <img src="./img/logo.svg" alt="Alura Geek Logo" />
+        <form class="search-bar" id="search-bar">
+          <input
+            class="search-bar-input"
+            type="search"
+            placeholder="¿Qué deseas buscar?"
+            id="search-input"
+          />
+          <buttton type="submit" class="search-bar-button" id="search-button"
+            ><span class="search-bar-icon"></span
+          ></buttton>
+        </form>
+      </div>
+      <button class="button login-button">Login</button>
+      <buttton class="search-button"
+        ><span class="search-button-icon"></span
+      ></buttton>
+    </header>
+    <main>
+      <section class="galery">
+        <div class="items container">
+          <div class="items-header header-all">
+            <h2 class="items-header-title">Todos los productos</h2>
+            <a href="product-form.html"
+              ><button class="button hero-button">Agregar Producto</button></a
+            >
+          </div>
+          <div class="items-list all" id="products-list"></div>
         </div>
-        <div class="items-list all" id="products-list">
-          
+      </section>
+    </main>
+    <footer>
+      <div class="contact">
+        <div class="contact-content container">
+          <div class="contact-info">
+            <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek" />
+            <ul class="contact-links">
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Quienes somos</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Política de privacidad</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Programa de fidelidad</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Nuestras tiendas</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Quiero ser franquiciado</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-link" href="#">Anuncie aquí</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <p class="contact-form-title">Hable con nosotros</p>
+            <form class="form" action="">
+              <div class="input-container">
+                <input
+                  class="form-input"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                  type="text"
+                  minlength="2"
+                  maxlength="50"
+                  pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}"
+                  required
+                  contact-form-input
+                />
+                <label class="form-label" for="name">Nombre</label>
+                <span class="input-error-message">Error</span>
+              </div>
+              <div class="input-container">
+                <textarea
+                  class="form-input form-textarea"
+                  type="text"
+                  id="message"
+                  name="message"
+                  placeholder="Escribe tu mensaje"
+                  minlength="2"
+                  maxlength="300"
+                  required
+                  contact-form-input
+                ></textarea>
+                <label class="form-label textarea-label" for="message"
+                  >Escribe tu mensaje</label
+                >
+                <span class="input-error-message">Error</span>
+              </div>
+              <input
+                class="hero-button form-submit"
+                type="submit"
+                id="contact-submit"
+                value="Enviar mensaje"
+                disabled
+              />
+            </form>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="contact">
-      <div class="contact-content container">
-        <div class="contact-info">
-          <img class="contact-img" src="img/logo.svg" alt="Logo Alura Geek">
-          <ul class="contact-links">
-            <li class="contact-list-item"><a class="contact-link" href="#">Quienes somos</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Política de privacidad</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Programa de fidelidad</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Nuestras tiendas</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Quiero ser franquiciado</a></li>
-            <li class="contact-list-item"><a class="contact-link" href="#">Anuncie aquí</a></li>
-          </ul>
-        </div>
-        <div class="contact-form">
-          <p class="contact-form-title">Hable con nosotros</p>
-          <form class="form" action="">
-            <div class="input-container">
-              <input class="form-input" id="name" name="name" placeholder="Nombre" type="text" minlength="2"
-                maxlength="50" pattern="(?!\s*$)[A-Za-zÑñ\s]{2,50}" required contact-form-input />
-              <label class="form-label" for="name">Nombre</label>
-              <span class="input-error-message">Error</span>
-            </div>
-            <div class="input-container">
-              <textarea class="form-input form-textarea" type="text" id="message" name="message"
-                placeholder="Escribe tu mensaje" minlength="2" maxlength="300" required contact-form-input></textarea>
-              <label class="form-label textarea-label" for="message">Escribe tu mensaje</label>
-              <span class="input-error-message">Error</span>
-            </div>
-            <input class="hero-button form-submit" type="submit" id="contact-submit" value="Enviar mensaje" disabled />
-          </form>
-        </div>
+      <div class="author">
+        <p>Desarrollado por Ezequiel Pereira</p>
+        <p>2022</p>
       </div>
-    </div>
-    <div class="author">
-      <p>Desarrollado por Ezequiel Pereira</p>
-      <p>2022</p>
-    </div>
-  </footer>
-  <script src="js/index.js" type="module"></script>
-  <script src="js/controller/productList.js" type="module"></script>
-</body>
-
+    </footer>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/controller/productList.js" type="module"></script>
+  </body>
 </html>
